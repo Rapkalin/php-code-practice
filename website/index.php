@@ -5,10 +5,23 @@ use Challenge\app\oneTarget\oneTarget;
 use Challenge\app\regex\regex;
 use Challenge\app\chunk\chunk;
 use Challenge\app\naturalNumbers\naturalNumbers;
+use Challenge\app\validMountain\validMountain;
 
 require_once 'vendor/autoload.php';
 require_once 'app/autoloader.php';
 Autoloader::register();
+
+// 6- Valid mountain
+$arr1 = [3,5,5]; // false
+$arr2 = [0,3,2,1]; // true
+$arr3 = [0, 2, 3, 3, 5, 2, 1, 0]; // false
+$arr4 = [0, 2, 3, 4, 5, 2, 1, 0]; // true
+$arr5 = [2,0,2]; // false
+$arr6 = [0,1,2,3,4,5,6,7,8,9]; // false
+$arr7 = [3,7,6,4,3,0,1,0]; // false
+$arr8 = [9,8,7,6,5,4,3,2,1,0]; // false
+$arr9 = [6,7,7,8,6]; // false
+dump(validMountain::resolve($arr4));
 
 // 5- Natural Numbers
 $a1 = 3332;
@@ -28,7 +41,7 @@ $size4 = 15;
 
 // 3- Regex
 $text = "ABgCrDgEFGhHijklmno";
-dump(regex::regex($text));
+// dump(regex::regex($text));
 
 // 2- One target
 $nums1 = [11,15, 2,7];
