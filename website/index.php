@@ -6,10 +6,25 @@ use Challenge\app\regex\regex;
 use Challenge\app\chunk\chunk;
 use Challenge\app\naturalNumbers\naturalNumbers;
 use Challenge\app\validMountain\validMountain;
+use Challenge\app\valueToTheEnd\valueToTheEnd;
+
 
 require_once 'vendor/autoload.php';
 require_once 'app/autoloader.php';
 Autoloader::register();
+
+// 8- Array sort complexty
+$array = [ 1, 5, 7, 10,'A', 'A', 'B', 'C', 5];
+$searchedValue = 'A';
+   ;
+// 7- Sum Ten
+/*$pass = 'Capitales';
+$array = [];
+$sumArr1 = [9, 4, 2, 6, 15];
+$sumArr2 = [3, 5, 1, 7];
+$sumArr3 = [5, 5, 2, 4, 6];
+$sumArr4 = [5, 2, 5, 7, 3];*/
+dump(valueToTheEnd::moveValueToTheEnd($array, $searchedValue));
 
 // 6- Valid mountain
 $arr1 = [3,5,5]; // false
@@ -21,7 +36,7 @@ $arr6 = [0,1,2,3,4,5,6,7,8,9]; // false
 $arr7 = [3,7,6,4,3,0,1,0]; // false
 $arr8 = [9,8,7,6,5,4,3,2,1,0]; // false
 $arr9 = [6,7,7,8,6]; // false
-dump(validMountain::resolve($arr4));
+// dump(validMountain::resolve($arr4));
 
 // 5- Natural Numbers
 $a1 = 3332;
